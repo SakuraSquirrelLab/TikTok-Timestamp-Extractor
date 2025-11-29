@@ -1,0 +1,11 @@
+WELCOME    = "Merhaba. Bir TikTok videosunun kesin tarih ve saatini almak için lütfen uygulamadan bağlantıyı yapıştırın:"
+ACC_GET    = "Hesap: "
+DATE       = "Gün: "
+MON        = "Ay: "
+YEAR       = "Yıl: "
+TIME_LOCAL = "Mevcut saat dilimindeki saat: "
+TIME_UTC   = "Greenwich Saatine Göre Saat (UTC): "
+ERR_LANG   = "Geçersiz dil seçimi."
+ERR_ID     = "Geçersiz video kimliği formatı."
+ERR_URL    = "Orijinal URL çözümlenemedi."
+MONTHS     = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık']

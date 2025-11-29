@@ -1,0 +1,11 @@
+WELCOME    = "Halo. Untuk mendapatkan tanggal dan waktu tepat video TikTok, silakan tempel tautan dari aplikasi:"
+ACC_GET    = "Akun: "
+DATE       = "Tanggal: "
+MON        = "Bulan: "
+YEAR       = "Tahun: "
+TIME_LOCAL = "Waktu di zona waktu saat ini: "
+TIME_UTC   = "Waktu Greenwich (UTC): "
+ERR_LANG   = "Pilihan bahasa tidak valid."
+ERR_ID     = "Format ID video tidak valid."
+ERR_URL    = "Tidak dapat memecahkan URL asli."
+MONTHS     = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember']

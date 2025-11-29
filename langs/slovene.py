@@ -1,0 +1,11 @@
+WELCOME    = "Živjo. Če želite dobiti točen datum in čas TikTok videa, prilepite povezavo iz aplikacije:"
+ACC_GET    = "Račun: "
+DATE       = "Dan: "
+MON        = "Mesec: "
+YEAR       = "Leto: "
+TIME_LOCAL = "Čas v trenutni časovni coni: "
+TIME_UTC   = "Čas v Greenwichu (UTC): "
+ERR_LANG   = "Neveljavna izbira jezika."
+ERR_ID     = "Neveljavna oblika video ID."
+ERR_URL    = "Ni mogoče rešiti izvirnega URL-ja."
+MONTHS     = ['Januar','Februar','Marec','April','Maj','Junij','Julij','Avgust','September','Oktober','November','December']

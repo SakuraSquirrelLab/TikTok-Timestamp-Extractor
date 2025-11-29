@@ -1,0 +1,11 @@
+WELCOME    = "Ahoj. Ak chcete získať presné dátum a čas TikTok videa, vložte prosím odkaz z aplikácie:"
+ACC_GET    = "Účet: "
+DATE       = "Deň: "
+MON        = "Mesiac: "
+YEAR       = "Rok: "
+TIME_LOCAL = "Čas v aktuálnom časovom pásme: "
+TIME_UTC   = "Čas v Greenwiche (UTC): "
+ERR_LANG   = "Neplatný výber jazyka."
+ERR_ID     = "Neplatný formát video ID."
+ERR_URL    = "Nedá sa vyriešiť pôvodné URL."
+MONTHS     = ['Január','Február','Marec','Apríl','Máj','Jún','Júl','August','September','Október','November','December']

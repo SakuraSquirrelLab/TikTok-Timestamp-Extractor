@@ -1,0 +1,11 @@
+WELCOME    = "Ħelow. Biex tikseb id-data u l-ħin eżatti ta’ vidjo TikTok, jekk jogħġbok peċċi l-link mill-app:"
+ACC_GET    = "Kont: "
+DATE       = "Jum: "
+MON        = "Xahar: "
+YEAR       = "Sena: "
+TIME_LOCAL = "Ħin fil-fus orarju kurrenti: "
+TIME_UTC   = "Ħin f’Greenwich (UTC): "
+ERR_LANG   = "Għażla ta’ lingwa mhux valida."
+ERR_ID     = "Format tal-ID tal-vidjo mhux validu."
+ERR_URL    = "Ma rnexxiex riżolvi l-URL oriġinali."
+MONTHS     = ['Jannar','Frar','Marzu','April','Mejju','Ġunju','Lulju','Awwissu','Settembru','Ottubru','Novembru','Diċembru']

@@ -1,0 +1,11 @@
+WELCOME    = "Sveiki. Lai iegūtu precīzu TikTok video datumu un laiku, ielīmējiet saiti no lietotnes:"
+ACC_GET    = "Konts: "
+DATE       = "Diena: "
+MON        = "Mēnesis: "
+YEAR       = "Gads: "
+TIME_LOCAL = "Laiks pašreizējā laika zonā: "
+TIME_UTC   = "Laiks Griničā (UTC): "
+ERR_LANG   = "Nederīga valodas izvēle."
+ERR_ID     = "Nederīgs video ID formāts."
+ERR_URL    = "Neizdevās atrisināt sākotnējo URL."
+MONTHS     = ['Janvāris','Februāris','Marts','Aprīlis','Maijs','Jūnijs','Jūlijs','Augusts','Septembris','Oktobris','Novembris','Decembris']

@@ -1,0 +1,11 @@
+WELCOME    = "Moien. Fir dat genau Datum an d'Zäit vun engem TikTok-Video ze kréien, pecht w.e.g. de Link vun der App:"
+ACC_GET    = "Kont: "
+DATE       = "Dag: "
+MON        = "Mount: "
+YEAR       = "Joer: "
+TIME_LOCAL = "Zäit an der aktueller Zäitzon: "
+TIME_UTC   = "Zäit zu Greenwich (UTC): "
+ERR_LANG   = " Ongëlteg Sproocheauswiel."
+ERR_ID     = " Ongëlteg Video-ID-Format."
+ERR_URL    = "Konn de Original URL net opklären."
+MONTHS     = ['Januar','Februar','Mäerz','Abrëll','Mee','Juni','Juli','August','September','Oktober','November','Dezember']

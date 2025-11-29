@@ -1,0 +1,11 @@
+WELCOME    = "Hola. Per obtenir la data i l’hora exactes d’un vídeo de TikTok, enganxeu l’enllaç de l’aplicació:"
+ACC_GET    = "Compte: "
+DATE       = "Dia: "
+MON        = "Mes: "
+YEAR       = "Any: "
+TIME_LOCAL = "Hora a la zona horària actual: "
+TIME_UTC   = "Hora a Greenwich (UTC): "
+ERR_LANG   = "Selecció d’idioma no vàlida."
+ERR_ID     = "Format d’ID de vídeo no vàlid."
+ERR_URL    = "No s’ha pogut resoldre l’URL original."
+MONTHS     = ['Gener','Febrer','Març','Abril','Maig','Juny','Juliol','Agost','Setembre','Octubre','Novembre','Desembre']

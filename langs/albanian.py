@@ -1,0 +1,11 @@
+WELCOME    = "Përshëndetje. Për të marrë datën dhe orën e saktë të një videoje TikTok, ju lutem ngjitni lidhjen nga aplikacioni:"
+ACC_GET    = "Llogaria: "
+DATE       = "Dita: "
+MON        = "Muaji: "
+YEAR       = "Viti: "
+TIME_LOCAL = "Ora në zonën kohore aktuale: "
+TIME_UTC   = "Ora në Greenuiç (UTC): "
+ERR_LANG   = "Zgjedhje e pavlefshme e gjuhës."
+ERR_ID     = "Formati i ID-së së videos është i pavlefshëm."
+ERR_URL    = "Nuk mund të zgjidhej URL-ja origjinale."
+MONTHS     = ['Janar','Shkurt','Mars','Prill','Maj','Qershor','Korrik','Gusht','Shtator','Tetor','Nëntor','Dhjetor']

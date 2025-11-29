@@ -1,0 +1,11 @@
+WELCOME    = "Sveiki. Norėdami gauti tikslią TikTok vaizdo įrašo datą ir laiką, įklijuokite nuorodą iš programėlės:"
+ACC_GET    = "Paskyra: "
+DATE       = "Diena: "
+MON        = "Mėnuo: "
+YEAR       = "Metai: "
+TIME_LOCAL = "Laikas dabartinėje laiko juostoje: "
+TIME_UTC   = "Laikas Grinviče (UTC): "
+ERR_LANG   = "Neteisingas kalbos pasirinkimas."
+ERR_ID     = "Neteisingas vaizdo įrašo ID formatas."
+ERR_URL    = "Nepavyko išspręsti pradinio URL."
+MONTHS     = ['Sausis','Vasaris','Kovas','Balandis','Gegužė','Birželis','Liepa','Rugpjūtis','Rugsėjis','Spalis','Lapkritis','Gruodis']

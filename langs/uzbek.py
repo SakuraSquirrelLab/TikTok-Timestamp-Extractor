@@ -1,0 +1,11 @@
+WELCOME    = "Salom. TikTok videoning aniq sanasi va vaqtini olish uchun ilovadan havolani joylang:"
+ACC_GET    = "Hisob: "
+DATE       = "Sana: "
+MON        = "Oy: "
+YEAR       = "Yil: "
+TIME_LOCAL = "Joriy vaqt mintaqasidagi vaqt: "
+TIME_UTC   = "Grinvich vaqti (UTC): "
+ERR_LANG   = "Yaroqsiz til tanlovi."
+ERR_ID     = "Video ID formatida xatolik."
+ERR_URL    = "Asl URL manzilini aniqlash mumkin emas."
+MONTHS     = ['Yanvar','Fevral','Mart','Aprel','May','Iyun','Iyul','Avgust','Sentabr','Oktabr','Noyabr','Dekabr']

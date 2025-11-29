@@ -1,0 +1,11 @@
+WELCOME    = "Hei. For å få nøyaktig dato og klokkeslett for en TikTok-video, vennligst lim inn lenken fra appen:"
+ACC_GET    = "Konto: "
+DATE       = "Dag: "
+MON        = "Måned: "
+YEAR       = "År: "
+TIME_LOCAL = "Tid i gjeldende tidssone: "
+TIME_UTC   = "Tid i Greenwich (UTC): "
+ERR_LANG   = "Ugyldig språkkvalg."
+ERR_ID     = "Ugyldig video-ID-format."
+ERR_URL    = "Kunne ikke løse opp opprinnelig URL."
+MONTHS     = ['Januar','Februar','Mars','April','Mai','Juni','Juli','August','September','Oktober','November','Desember']

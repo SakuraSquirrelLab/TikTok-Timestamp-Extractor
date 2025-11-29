@@ -1,0 +1,11 @@
+WELCOME    = "Bună. Pentru a obține data și ora exacte ale unui videoclip TikTok, te rog lipește linkul din aplicație:"
+ACC_GET    = "Cont: "
+DATE       = "Zi: "
+MON        = "Lună: "
+YEAR       = "An: "
+TIME_LOCAL = "Ora în fusul orar curent: "
+TIME_UTC   = "Ora la Greenwich (UTC): "
+ERR_LANG   = "Selecție de limbă nevalidă."
+ERR_ID     = "Format de ID video nevalid."
+ERR_URL    = "Nu s-a putut rezolva URL-ul original."
+MONTHS     = ['Ianuarie','Februarie','Martie','Aprilie','Mai','Iunie','Iulie','August','Septembrie','Octombrie','Noiembrie','Decembrie']

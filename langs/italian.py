@@ -1,0 +1,2 @@
+WELCOME    = "Ciao. Per ottenere la data e l’ora esatte di un video TikTok, incolla il link dall’app:"ACC_GET    = "Account: "DATE       = "Giorno: "MON        = "Mese: "YEAR       = "Anno: "
+TIME_LOCAL = "Ora nel fuso orario corrente: "TIME_UTC   = "Ora a Greenwich (UTC): "ERR_LANG   = "Selezione della lingua non valida."ERR_ID     = "Formato ID video non valido."ERR_URL    = "Impossibile risolvere l’URL originale."MONTHS     = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno',              'Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre']
