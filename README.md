@@ -1,12 +1,65 @@
-# TikTok-Timestamp-Extractor
-A simple TikTok timestamp decoder for OSINT and metadata checking.
+# TikTok Video Timestamp Extractor
 
-This project is a small Python script that helps you find out the exact upload time of a TikTok video.
-It works by following the redirect of a TikTok share link, pulling the real video URL, and extracting the timestamp that TikTok hides inside the video ID. The script then shows the time both in your local timezone and in UTC.
+A small Python tool that determines the exact upload time of a TikTok
+video.
 
-The tool doesn’t use any TikTok API and doesn’t require tokens or accounts — just a link to the video.
-There’s also support for multiple interface languages through simple language modules.
+The script follows the redirect from a TikTok share link, retrieves the
+real video URL, and extracts the timestamp embedded in the video ID. It
+then shows the upload time in both your local timezone and UTC.\
+No TikTok API, no tokens, no login --- just a link to the video.\
+The tool also supports multiple interface languages through simple
+language modules.
 
-It can be useful for anyone who needs to check when a TikTok video was originally posted — whether for OSINT work, personal curiosity, or technical research.
+This can be helpful for OSINT work, technical analysis, or simply
+checking when a video first appeared online.
 
-Requirements are minimal: only Python 3 and the requests library.
+------------------------------------------------------------------------
+
+## Requirements
+
+-   Python 3\
+-   `requests` library
+
+Install dependencies:
+
+``` bash
+pip install requests
+```
+
+------------------------------------------------------------------------
+
+## Usage
+
+Run the script and paste a TikTok share link (for example the one copied
+from the app):
+
+    https://vt.tiktok.com/ZSfXTxq8F
+
+Example output:
+
+    ====================
+    == Account:  dragonstarszn
+    == Day:     26
+    == Month:   February
+    == Year:    2021
+    == Time in current timezone:  05:10:56
+    == Time in Greenwich (UTC):   02:10:56
+    ====================
+
+    Press Enter to exit...
+
+------------------------------------------------------------------------
+
+## Language Selection
+
+When starting the script, choose the interface language (e.g., albanian,
+arabic, belarusian, bulgarian, catalan, etc.).\
+Default: **english**.
+
+------------------------------------------------------------------------
+
+## License
+
+This project is licensed under the MIT License.\
+[View
+License](https://github.com/SakuraSquirrelLab/TikTok-Timestamp-Extractor/blob/main/LICENSE)
