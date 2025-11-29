@@ -1,2 +1,101 @@
-import reimport os
-import sysimport datetimeimport requestsimport importlibfrom urllib.parse import urlparseLANG_DIR = os.path.join(os.path.dirname(__file__), 'langs')sys.path.insert(0, LANG_DIR)allowed = {    'albanian','arabic','belarusian','bulgarian','catalan','chinese','czech',    'danish','dutch','english','estonian','finnish','french','german','greek',    'hebrew','hindi','hungarian','icelandic','indonesian','irish','italian',    'japanese','kazakh','korean','latvian','lithuanian','luxembourgish','maltese',    'norwegian','persian','polish','portuguese','romanian','russian','serbian',    'slovak','slovene','spanish','swedish','taiwanese','thai','turkish',    'ukrainian','uzbek','vietnamese'}langs = {}for fname in os.listdir(LANG_DIR):    if fname.endswith('.py') and fname != '__init__.py':        code = os.path.splitext(fname)[0]        if code in allowed:            langs[code] = importlib.import_module(code)print()available = sorted(langs.keys())N = 5if len(available) > N:    opts_display = ', '.join(available[:N]) + ', etc'else:    opts_display = ', '.join(available)choice = input(f"Select language ({opts_display}): ").strip().lower()if choice not in langs:    print("Error: language not found")    sys.exit(1)msgs = langs[choice]print()print(msgs.WELCOME)short_url = input(">> ").strip()parsed = urlparse(short_url)if parsed.scheme not in ('http', 'https') or not parsed.netloc.lower().endswith('tiktok.com'):    print(msgs.ERR_URL)    sys.exit(1)try:    resp = requests.get(        short_url,        allow_redirects=True,        headers={'User-Agent': 'Mozilla/5.0'},        timeout=10    )    full_url = resp.urlexcept requests.RequestException:    print(msgs.ERR_URL)    sys.exit(1)m = re.search(r'/(?:video|photo|v)/(\d+)', full_url)if not m:    print(msgs.ERR_URL)    sys.exit(1)video_id = m.group(1)if len(video_id) > 19:    print(msgs.ERR_ID)    sys.exit(1)try:    unix_ts = int(video_id) >> 32except ValueError:    print(msgs.ERR_ID)    sys.exit(1)dt_utc = datetime.datetime.fromtimestamp(unix_ts, datetime.timezone.utc)try:    dt_local = dt_utc.astimezone()except Exception:    offset = datetime.datetime.now(datetime.timezone.utc).astimezone().utcoffset() or datetime.timedelta(0)    dt_local = dt_utc + offsetparts = full_url.split('/@', 1)if len(parts) < 2:    print(msgs.ERR_URL)    sys.exit(1)account = parts[1].split('/')[0]labels = [msgs.ACC_GET, msgs.DATE, msgs.MON, msgs.YEAR, msgs.TIME_LOCAL, msgs.TIME_UTC]values = [    account,    f"{dt_local.day:02d}",    (msgs.MONTHS[dt_local.month-1] if hasattr(msgs, 'MONTHS') else dt_local.strftime('%B')),    str(dt_local.year),    dt_local.strftime('%H:%M:%S'),    dt_utc.strftime('%H:%M:%S')]print()print("====================")for label, value in zip(labels, values):    print(f"== \033[1;32m{label}\033[0m \033[0;31m{value}\033[0m")print("====================")print()input("\nPress Enter to exit...")
+import re
+import os
+import sys
+import datetime
+import requests
+import importlib
+from urllib.parse import urlparse
+
+LANG_DIR = os.path.join(os.path.dirname(__file__), 'langs')
+sys.path.insert(0, LANG_DIR)
+allowed = {
+    'albanian','arabic','belarusian','bulgarian','catalan','chinese','czech',
+    'danish','dutch','english','estonian','finnish','french','german','greek',
+    'hebrew','hindi','hungarian','icelandic','indonesian','irish','italian',
+    'japanese','kazakh','korean','latvian','lithuanian','luxembourgish','maltese',
+    'norwegian','persian','polish','portuguese','romanian','russian','serbian',
+    'slovak','slovene','spanish','swedish','taiwanese','thai','turkish',
+    'ukrainian','uzbek','vietnamese'
+}
+langs = {}
+for fname in os.listdir(LANG_DIR):
+    if fname.endswith('.py') and fname != '__init__.py':
+        code = os.path.splitext(fname)[0]
+        if code in allowed:
+            langs[code] = importlib.import_module(code)
+
+print()
+available = sorted(langs.keys())
+N = 5
+if len(available) > N:
+    opts_display = ', '.join(available[:N]) + ', etc'
+else:
+    opts_display = ', '.join(available)
+choice = input(f"Select language ({opts_display}): ").strip().lower()
+if choice not in langs:
+    print("Error: language not found")
+    sys.exit(1)
+msgs = langs[choice]
+print()
+print(msgs.WELCOME)
+short_url = input(">> ").strip()
+parsed = urlparse(short_url)
+if parsed.scheme not in ('http', 'https') or not parsed.netloc.lower().endswith('tiktok.com'):
+    print(msgs.ERR_URL)
+    sys.exit(1)
+
+try:
+    resp = requests.get(
+        short_url,
+        allow_redirects=True,
+        headers={'User-Agent': 'Mozilla/5.0'},
+        timeout=10
+    )
+    full_url = resp.url
+except requests.RequestException:
+    print(msgs.ERR_URL)
+    sys.exit(1)
+
+m = re.search(r'/(?:video|photo|v)/(\d+)', full_url)
+if not m:
+    print(msgs.ERR_URL)
+    sys.exit(1)
+video_id = m.group(1)
+if len(video_id) > 19:
+    print(msgs.ERR_ID)
+    sys.exit(1)
+
+try:
+    unix_ts = int(video_id) >> 32
+except ValueError:
+    print(msgs.ERR_ID)
+    sys.exit(1)
+
+dt_utc = datetime.datetime.fromtimestamp(unix_ts, datetime.timezone.utc)
+try:
+    dt_local = dt_utc.astimezone()
+except Exception:
+    offset = datetime.datetime.now(datetime.timezone.utc).astimezone().utcoffset() or datetime.timedelta(0)
+    dt_local = dt_utc + offset
+
+parts = full_url.split('/@', 1)
+if len(parts) < 2:
+    print(msgs.ERR_URL)
+    sys.exit(1)
+account = parts[1].split('/')[0]
+labels = [msgs.ACC_GET, msgs.DATE, msgs.MON, msgs.YEAR, msgs.TIME_LOCAL, msgs.TIME_UTC]
+values = [
+    account,
+    f"{dt_local.day:02d}",
+    (msgs.MONTHS[dt_local.month-1] if hasattr(msgs, 'MONTHS') else dt_local.strftime('%B')),
+    str(dt_local.year),
+    dt_local.strftime('%H:%M:%S'),
+    dt_utc.strftime('%H:%M:%S')
+]
+print()
+print("====================")
+for label, value in zip(labels, values):
+    print(f"== \033[1;32m{label}\033[0m \033[0;31m{value}\033[0m")
+print("====================")
+print()
+input("\nPress Enter to exit...")
