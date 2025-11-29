@@ -17,7 +17,7 @@ checking when a video first appeared online.
 
 ## Requirements
 
--   Python 3\
+-   Python 3
 -   `requests` library
 
 Install dependencies:
